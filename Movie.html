@@ -1,10 +1,10 @@
 <html>
-<!- - 
+<!-- 
 Program Name:   Seminole Movie Connection
-Author: 
-Date: 
+Author: Jeffrey Budnick
+Date: 10-31-2016
 Filename:   Movie.html
-- ->
+-->
     
 <head>
     <script type="text/javascript"></script>
@@ -32,28 +32,69 @@ Filename:   Movie.html
   <h1 class="text-primary">Movie Information:</h1>
     <div class="list-group">
         <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading">Movie Title:</h3>
-            <p class="list-group-item-text lead text-primary" id="Title"> </p>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading">Rated:</h3>
-            <p class="list-group-item-text lead text-primary" id="Rated"> </p>
-        </a>
-        <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Actors:</h3>
             <p class="list-group-item-text lead text-primary" id="Actors">  </p>
         </a>
         
         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Awards:</h3>
+            <p class="list-group-item-text lead text-primary" id="Awards">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Country:</h3>
+            <p class="list-group-item-text lead text-primary" id="Country">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Director:</h3>
+            <p class="list-group-item-text lead text-primary" id="Director">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Genre:</h3>
+            <p class="list-group-item-text lead text-primary" id="Genre">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Language:</h3>
+            <p class="list-group-item-text lead text-primary" id="Language">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Metascroe:</h3>
+            <p class="list-group-item-text lead text-primary" id="Metascore">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Plot:</h3>
             <p class="list-group-item-text lead text-primary" id="Plot">  </p>
-	    </a>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Rated:</h3>
+            <p class="list-group-item-text lead text-primary" id="Rated"> </p>
+        </a>
         
         <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Release Date:</h3>
             <p class="list-group-item-text lead text-primary" id="Released">  </p>
         </a> 
 
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Title:</h3>
+            <p class="list-group-item-text lead text-primary" id="Title">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Writer:</h3>
+            <p class="list-group-item-text lead text-primary" id="Writer">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Year:</h3>
+            <p class="list-group-item-text lead text-primary" id="Year">  </p>
+        </a>
     </div>
 </div> 
     <script>
@@ -66,11 +107,20 @@ Filename:   Movie.html
                       data: message             
                 })
                 .done(function(json){
-                     $('#Title').html(json.Title);
-                     $('#Rated').html(json.Rated);
                      $('#Actors').html(json.Actors);
-                     $('#Plot').html(json.Plot);
+                     $('#Awards').html(json.Awards);
+                     $('#Country').html(json.Country);
                      $('#Released').html(json.Released);
+                     $('#Director').html(json.Director);
+                     $('#Genre').html(json.Genre);
+                     $('#Language').html(json.Language);
+                     $('#Metascore').html(json.Metascore);
+                     $('#Plot').html(json.Plot);
+                     $('#Rated').html(json.Rated);
+                     $('#Released').html(json.Released);
+                     $('#Title').html(json.Title);
+                     $('#Writer').html(json.Writer);
+                     $('#Year').html(json.Year);
                 })
                 .fail(function() {
                       alert("Posting failed.");              
